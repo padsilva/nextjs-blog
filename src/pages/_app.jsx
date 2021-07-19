@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types'
 import Head from 'next/head'
-import GithubCorner from 'react-github-corner'
+import { DefaultSeo } from 'next-seo'
 
 import GlobalStyle from 'styles/global'
+import SEO from '../../next-seo.config'
 
 const App = ({ Component, pageProps }) => (
   <>
     <Head>
-      <title>Boilerplate JavaScript</title>
+      <title>My Blog</title>
       <link
         rel="apple-touch-icon"
         sizes="180x180"
@@ -38,15 +39,9 @@ const App = ({ Component, pageProps }) => (
         content="A boilerplate to work with JavaScript, React, NextJS and Styled Components"
       />
     </Head>
+    <DefaultSeo {...SEO} />
     <GlobalStyle />
     <Component {...pageProps} />
-    <GithubCorner
-      href="https://github.com/padsilva/nextjs-boilerplate"
-      bannerColor="#fff"
-      octoColor="#000"
-      target="_blank"
-      rel="noopener"
-    />
   </>
 )
 

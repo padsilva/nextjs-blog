@@ -18,6 +18,3 @@ jobs:
 
       - name: Linting
         run: yarn lint
-
-      - name: Test
-        run: yarn test:ci
