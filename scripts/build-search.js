@@ -61,8 +61,6 @@ const transformPostsToSearchObjects = (posts) =>
     const posts = getAllPosts()
     const transformed = transformPostsToSearchObjects(posts)
 
-    console.log(transformed)
-
     if (posts.length > 0) {
       const client = algoliasearch(
         process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
@@ -73,11 +71,7 @@ const transformPostsToSearchObjects = (posts) =>
       const algoliaResponse = await index.saveObjects(transformed)
 
       console.log(
-        `🎉 Sucessfully added ${
-          algoliaResponse.objectIDs.length
-        } records to Algolia search. Object IDs:\n${algoliaResponse.objectIDs.join(
-          '\n'
-        )}`
+        `🎉 Sucessfully added ${algoliaResponse.objectIDs.length} records to Algolia search.`
       )
     }
   } catch (error) {
