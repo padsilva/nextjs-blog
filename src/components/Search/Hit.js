@@ -4,7 +4,7 @@ import PostItem from 'components/PostItem'
 
 const Hit = ({ hit }) => (
   <PostItem
-    slug={hit.fields.slug}
+    slug={hit.slug}
     title={hit.title}
     date={hit.date}
     description={hit.description}
