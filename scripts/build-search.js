@@ -65,11 +65,11 @@ const transformPostsToSearchObjects = (posts) =>
 
     if (posts.length > 0) {
       const client = algoliasearch(
-        '4S0UKKIILW',
-        'd68f4f8d39f2fb7a19f0d2ab1d71484d'
+        process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
+        process.env.ALGOLIA_SEARCH_ADMIN_KEY
       )
 
-      const index = client.initIndex('dev_POSTS')
+      const index = client.initIndex(process.env.NEXT_PUBLIC_ALGOLIA_INDEX_NAME)
       const algoliaResponse = await index.saveObjects(transformed)
 
       console.log(
