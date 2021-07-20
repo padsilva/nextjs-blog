@@ -6,10 +6,6 @@ export const PostItemLink = styled.a`
   display: flex;
   text-decoration: none;
 
-  body#grid & {
-    background-color: var(--background);
-  }
-
   &:hover {
     color: var(--highlight);
   }
@@ -21,19 +17,6 @@ export const PostItemWrapper = styled.section`
   display: flex;
   padding: 2rem 3rem;
   width: 100%;
-
-  body#grid & {
-    border: none;
-    padding: 2rem 1rem;
-    flex-direction: column;
-    justify-content: center;
-
-    ${media.lessThan('large')`
-      align-items: flex-start;
-      flex-direction: column;
-      padding: 2rem 1rem;
-    `}
-  }
 `
 
 export const PostItemTag = styled.div`
@@ -57,10 +40,6 @@ export const PostItemTag = styled.div`
     padding: .2rem .5rem;
     margin-bottom: .7rem;
   `}
-
-  body#grid & {
-    margin-bottom: 1.5rem;
-  }
 `
 
 export const PostItemInfo = styled.div`
@@ -77,11 +56,6 @@ export const PostItemTitle = styled.h1`
   font-size: 1.6rem;
   font-weight: 700;
   margin: 0.2rem 0 0.5rem;
-
-  body#grid & {
-    line-height: 1.1;
-    margin: 0.8rem 0;
-  }
 `
 
 export const PostItemDescription = styled.p`

@@ -1,29 +1,15 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import {
-  ArrowToTop,
-  Bulb,
-  GridAlt,
-  Home,
-  ListUl,
-  Search
-} from 'styled-icons/boxicons-regular'
+import { ArrowToTop, Bulb, Home, Search } from 'styled-icons/boxicons-regular'
 
 import * as S from './styled'
 
 const MenuBar = () => {
   const [theme, setTheme] = useState(null)
-  const [display, setDisplay] = useState(null)
-
-  const isDarkMode = theme === 'dark'
-  const isListMode = display === 'list'
 
   useEffect(() => {
     setTheme(window.__theme)
-    setDisplay(window.__display)
-
     window.__onThemeChange = () => setTheme(window.__theme)
-    window.__onDisplayChange = () => setDisplay(window.__display)
   }, [])
 
   return (
@@ -48,20 +34,11 @@ const MenuBar = () => {
         <S.MenuBarItem
           title="Light / Dark Mode"
           onClick={() =>
-            window.__setPreferredTheme(isDarkMode ? 'light' : 'dark')
+            window.__setPreferredTheme(theme === 'dark' ? 'light' : 'dark')
           }
           className={theme}
         >
           <Bulb />
-        </S.MenuBarItem>
-        <S.MenuBarItem
-          title="List / Grid View"
-          onClick={() =>
-            window.__setPreferredDisplay(isListMode ? 'grid' : 'list')
-          }
-          className="display"
-        >
-          {isListMode ? <GridAlt /> : <ListUl />}
         </S.MenuBarItem>
         <S.MenuBarItem
           title="Go to the Top"

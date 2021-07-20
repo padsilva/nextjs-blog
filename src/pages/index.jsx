@@ -7,31 +7,27 @@ import SEO from 'components/seo'
 
 import { getAllPosts } from 'lib/api'
 
-import * as S from 'components/Home/styled'
-
 const Index = ({ allPosts, total, current, prev, next }) => (
   <Base>
     <SEO title="Home" />
 
-    <S.PostList>
-      {allPosts.map(
-        (
-          { background, category, date, title, description, slug, readingTime },
-          i
-        ) => (
-          <PostItem
-            key={i}
-            slug={slug}
-            background={background}
-            category={category}
-            date={date}
-            readingTime={readingTime}
-            title={title}
-            description={description}
-          />
-        )
-      )}
-    </S.PostList>
+    {allPosts.map(
+      (
+        { background, category, date, title, description, slug, readingTime },
+        i
+      ) => (
+        <PostItem
+          key={i}
+          slug={slug}
+          background={background}
+          category={category}
+          date={date}
+          readingTime={readingTime}
+          title={title}
+          description={description}
+        />
+      )
+    )}
 
     <Pagination current={current} total={total} prev={prev} next={next} />
   </Base>
