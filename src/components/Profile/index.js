@@ -16,7 +16,14 @@ const Profile = () => (
       </S.ProfileLink>
     </Link>
     <S.ProfileDescription>
-      A blog about bikes, rides and other cool stuffs.
+      A blog developed under the Udemy course{' '}
+      <S.ProfileLink
+        href="https://www.udemy.com/course/gatsby-crie-um-site-pwa-com-react-graphql-e-netlify-cms/"
+        target="_blank"
+        rel="noopener"
+      >
+        <u>Gatsby: Crie um site PWA com React, GraphQL e Netlify CMS</u>
+      </S.ProfileLink>
     </S.ProfileDescription>
   </S.ProfileWrapper>
 )
