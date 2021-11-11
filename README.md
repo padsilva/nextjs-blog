@@ -1,30 +1,69 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# :memo: Blog
 
-## Getting Started
+A blog that reads and understand Markdown files, creating pages automatically from the content of those files.
 
-First, run the development server:
+## :rocket: Getting Started
+
+### Aloglia
+
+This project uses [Algolia](https://www.algolia.com/), so you need to create an account there first.
+
+#### 1. Create Application
+
+First, you need to create the application, giving a name, pick a subscription of your choise and configure the products.
+
+#### 2. Create Index
+
+After that, you need to create the index with name "dev_POSTS". Go to Index Configuration sub-menu and set which attributes you want to use for searching, and in what order and manner you will search them.
+
+### NextJS
+
+After creating your account on [Algolia](https://www.algolia.com/) and following the previous steps, you just need to execute the next steps:
+
+- Clone the project:
 
 ```bash
-npm run dev
-# or
-yarn dev
+  git clone https://github.com/padsilva/nextjs-blog
+```
+
+- Go to the project directory:
+
+```bash
+  cd nextjs-blog
+```
+
+- Install dependencies:
+
+```bash
+  npm install
+  # or
+  yarn
+```
+
+- Rename the `.env.example` to `.env.local` (if you plan to run locally) and edit the keys there.
+
+- Run the development server:
+
+```bash
+  npm run dev
+  # or
+  yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## :computer: Commands
 
-## Learn More
+- `dev`: runs your application on `localhost:3000`
+- `build`: creates the production build version
+- `start`: starts a simple server with the build production code
+- `lint`: runs the linter in all components and pages
+- `test`: runs jest to test all components and pages
 
-To learn more about Next.js, take a look at the following resources:
+## :construction_worker: Author
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[@padsilva](https://www.github.com/padsilva)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## :mailbox: Feedback
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+If you have any feedback, please reach out to me at pauloalexandreduartesilva@gmail.com.
