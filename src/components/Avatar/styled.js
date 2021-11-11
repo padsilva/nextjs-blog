@@ -6,7 +6,7 @@ export const AvatarWrapper = styled.div`
   width: 7rem;
   margin: auto;
 
-  > div {
+  > span {
     border-radius: 50%;
   }
 
